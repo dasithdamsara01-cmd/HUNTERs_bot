@@ -67,7 +67,7 @@ async function connectToWA() {
   const { state, saveCreds } = await useMultiFileAuthState(path.join(__dirname, '/auth_info_baileys/'));
   const { version } = await fetchLatestBaileysVersion();
 
-  const danuwa = makeWASocket({
+  const HUNTER = makeWASocket({
     logger: P({ level: 'silent' }),
     printQRInTerminal: false,
     browser: Browsers.macOS("Firefox"),
@@ -78,7 +78,7 @@ async function connectToWA() {
     generateHighQualityLinkPreview: true,
   });
 
-  danuwa.ev.on('connection.update', async (update) => {
+  HUNTER.ev.on('connection.update', async (update) => {
     const { connection, lastDisconnect } = update;
     if (connection === 'close') {
       if (lastDisconnect?.error?.output?.statusCode !== DisconnectReason.loggedOut) {
