@@ -89,7 +89,7 @@ async function connectToWA() {
 
       const up = `HUNTER-MD connected ✅\n\nPREFIX: ${prefix}`;
       await hunter.sendMessage(ownerNumber[0] + "@s.whatsapp.net", {
-        image: { url: `https://github.com/DANUWA-MD/DANUWA-MD/blob/main/images/DANUWA-MD.png?raw=true` },
+        image: { url: `https://github.com/dasithdamsara01-cmd/HUNTERs_bot/blob/main/images/ChatGPT%20Image%20Feb%2022%2C%202026%2C%2004_30_33%20PM.png` },
         caption: up
       });
 
